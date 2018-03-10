@@ -1,0 +1,545 @@
+/* General variables */
+/* General configurations */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1em;
+}
+
+button {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+input {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #ccc;
+}
+
+input::-moz-placeholder {
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #ccc;
+}
+
+input:-ms-input-placeholder {
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #ccc;
+}
+
+input::placeholder {
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #ccc;
+}
+
+/* Animations */
+@-webkit-keyframes bounceLeft {
+    0% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(-30px, -50%, 0);
+        transform: translate3d(-30px, -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+@keyframes bounceLeft {
+    0% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(-30px, -50%, 0);
+        transform: translate3d(-30px, -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+@-webkit-keyframes bounceRight {
+    0% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(calc(100% + 30px), -50%, 0);
+        transform: translate3d(calc(100% + 30px), -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+}
+
+@keyframes bounceRight {
+    0% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(calc(100% + 30px), -50%, 0);
+        transform: translate3d(calc(100% + 30px), -50%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+    }
+}
+
+/* Page background */
+.user {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url("/resources/img/background.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.user_options-container {
+    position: relative;
+    width: 80%;
+}
+
+.user_options-text {
+    font-family: "Montserrat", sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.85);
+    border-radius: 3px;
+}
+
+/* Registered and Unregistered user box and text */
+.user_options-registered,
+.user_options-unregistered {
+    font-family: "Montserrat", sans-serif;
+    width: 50%;
+    padding: 75px 45px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.user_registered-title,
+.user_unregistered-title {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 15px;
+    font-size: 1.66rem;
+    line-height: 1em;
+}
+
+.user_unregistered-text,
+.user_registered-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.83rem;
+    line-height: 1.4em;
+}
+
+.user_registered-login,
+.user_unregistered-signup {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 0.2rem;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.user_registered-login:hover,
+.user_unregistered-signup:hover {
+    font-family: "Montserrat", sans-serif;
+    color: rgba(34, 34, 34, 0.85);
+    background-color: #ccc;
+}
+
+/* Login and signup forms */
+.user_options-forms {
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: calc(50% - 30px);
+    min-height: 419px;
+    padding: 70px 40px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+    -webkit-transform: translate3d(100%, -50%, 0);
+    transform: translate3d(100%, -50%, 0);
+}
+
+.user_options-forms .user_forms-login {
+    -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.user_options-forms .forms_title {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #e8716d;
+    letter-spacing: 0.1rem;
+}
+
+.user_options-forms .forms_field:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.user_options-forms .forms_field-input {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 20px 6px 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: gray;
+    letter-spacing: 0.1rem;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.user_options-forms .forms_field-input:focus {
+    border-color: gray;
+}
+
+.user_options-forms .forms_buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.user_options-forms .forms_buttons-forgot {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.1rem;
+    color: #ccc;
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
+.user_options-forms .forms_buttons-forgot:hover {
+    color: #b3b3b3;
+}
+
+.user_options-forms .forms_buttons-action {
+    background-color: #e8716d;
+    border-radius: 3px;
+    padding: 10px 35px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.user_options-forms .forms_buttons-action:hover {
+    background-color: #e14641;
+}
+
+.user_options-forms .user_forms-signup,
+.user_options-forms .user_forms-login {
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    width: calc(100% - 80px);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.user_options-forms .user_forms-signup {
+    -webkit-transform: translate3d(120px, 0, 0);
+    transform: translate3d(120px, 0, 0);
+}
+
+.user_options-forms .user_forms-signup .forms_buttons {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.user_options-forms .user_forms-login {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Triggers */
+.user_options-forms.signup-click {
+    -webkit-animation: bounceLeft 1s forwards;
+    animation: bounceLeft 1s forwards;
+}
+
+.user_options-forms.signup-click .user_forms-signup {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.user_options-forms.signup-click .user_forms-login {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate3d(-120px, 0, 0);
+    transform: translate3d(-120px, 0, 0);
+}
+
+.user_options-forms.login-click {
+    -webkit-animation: bounceRight 1s forwards;
+    animation: bounceRight 1s forwards;
+}
+
+.user_options-forms.login-click .user_forms-signup {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.user_options-forms.login-click .user_forms-login {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#message {
+    font-family: Montserrat, sans-serif;
+    font-size: 22px;
+    margin-top: -28px
+}
+
+div.cs-select {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    background: #fff;
+    z-index: 100;
+    width: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.cs-select:focus {
+    outline: none; /* For better accessibility add a style for this in your skin */
+}
+
+.cs-select select {
+    display: none;
+}
+
+.cs-select span {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Placeholder and selected option */
+.cs-select > span {
+    padding-right: 3em;
+}
+
+.cs-select > span::after,
+.cs-select .cs-selected span::after {
+    speak: none;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.cs-select > span::after {
+    content: '\25BE';
+    right: 0em;
+}
+
+.cs-select.cs-active > span::after {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Options */
+.cs-select .cs-options {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    visibility: hidden;
+}
+
+.cs-select.cs-active .cs-options {
+    visibility: visible;
+}
+
+.cs-select ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.cs-select ul span {
+    padding-top: 4%;
+}
+
+.cs-select ul li.cs-focus span {
+    background-color: #ddd;
+}
+
+/* Optgroup and optgroup label */
+.cs-select li.cs-optgroup ul {
+    padding-left: 1em;
+}
+
+.cs-select li.cs-optgroup > span {
+    cursor: default;
+}
+
+div.cs-skin-border {
+
+}
+
+@media screen and (max-width: 30em) {
+    div.cs-skin-border { font-size: 1em; }
+}
+
+.cs-skin-border > span {
+
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.cs-skin-border > span::after,
+.cs-skin-border .cs-selected span::after {
+    font-family: 'icomoon';
+    content: '\e000';
+}
+
+.cs-skin-border ul span::after {
+    content: '';
+    opacity: 0;
+}
+
+.cs-skin-border .cs-selected span::after {
+    content: '\e00e';
+    color: #ddd9c9;
+    font-size: 1.5em;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.cs-skin-border.cs-active > span {
+    background: #fff;
+    border-color: #fff;
+    color: #2980b9;
+}
+
+.cs-skin-border .cs-options {
+    color: #2980b9;
+    font-size: 0.75em;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, visibility 0s 0.2s;
+    transition: opacity 0.2s, visibility 0s 0.2s;
+}
+
+.cs-skin-border.cs-active .cs-options {
+    text-align: center;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.cs-skin-border ul span {
+    padding: 1em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.cs-skin-border .cs-options li span:hover,
+.cs-skin-border li.cs-focus span {
+    background: #f5f3ec;
+}
+:active, :hover, :focus {
+    outline: 0 ;
+    outline-offset: 0;
+}

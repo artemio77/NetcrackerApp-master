@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c146b585-eef5-44a7-bea4-328dd2a4cce7" name="localhost:8000" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="D:\Java Workspace\NetcrackerApp-master\target" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
