@@ -19,7 +19,7 @@
 </head>
 
 <body>
-<jsp:include page="${contextPath}/WEB-INF/views/navbar/accountantnavbar.jsp.jsp"/>
+<jsp:include page="${contextPath}/WEB-INF/views/navbar/accountantnavbar.jsp"/>
 <div class="container text-center">
     <h1>Departments List</h1>
     <div class="limiter">
@@ -32,7 +32,7 @@
                             <th class="column100 column1" data-column="column1">ID</th>
                             <th class="column100 column2" data-column="column2">Name</th>
                             <th class="column100 column3" data-column="column3">Location</th>
-                            <c:forEach items="${departmentList}" varStatus="status" var="department">
+                            <c:forEach items="${listDepartment}" varStatus="status" var="department">
                         <tr class="row100">
                             <td class="column100 column1" data-column="column1">${department.id}</td>
                             <td class="column100 column2" data-column="column2">${department.name}</td>

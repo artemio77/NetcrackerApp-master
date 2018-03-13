@@ -22,7 +22,7 @@
 <body>
 <ul class="menu">
     <li><a href="/" class="amain">Home</a></li>
-    <li><a href="/" class="amain">Department List</a></li>
+    <li><a href="/accountant/department/" class="amain">Department List</a></li>
     <li><a href="/accountant/employee/" class="amain">Employees List</a></li>
     <li><a class="amain" href="/">${pageContext.request.userPrincipal.name} | ${auth_user.role}</a></li>
     <li><a class="amain" href="/logout">| Logout</a></li>
