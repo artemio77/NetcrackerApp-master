@@ -12,7 +12,7 @@ public interface DepartmentService {
 
     Department findByDeptId(String deptId);
 
-    void removeDeptByName(String deptName);
+    void removeDeptById(String deptId);
 
     List<Department> list();
 

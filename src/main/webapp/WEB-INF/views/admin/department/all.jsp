@@ -69,7 +69,7 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;
 
                             <a class="column100 atable" data-column="column4"
-                               href="<c:url value="/delete/${department.id}"/>">Delete</a>
+                               href="<c:url value="/admin/department/delete/${department.id}"/>">Delete</a>
                         </td>
                     </tr>
                     </c:forEach>

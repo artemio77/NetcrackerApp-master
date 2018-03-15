@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import static com.gmail.derevets.artem.springsecurityapp.utilites.Queries.*;
 @Service
 public class DepartmentDaoImp
         extends ModelDao
-        implements DepartmentDao,Serializable {
+        implements DepartmentDao, Serializable {
 
     private Logger logger = Logger.getLogger(UserDaoImp.class.getName());
 

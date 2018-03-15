@@ -41,7 +41,7 @@ public class DepartmentServiceImp implements DepartmentService ,Serializable{
     }
 
     @Override
-    public void removeDeptByName(String id) {
+    public void removeDeptById(String id) {
         departmentDao.remove(id);
     }
 

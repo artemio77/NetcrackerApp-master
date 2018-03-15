@@ -85,7 +85,7 @@ public class AdminDepartmentController {
             @PathVariable(value = "id") final String id,
             final ModelAndView modelAndView
     ) {
-        this.departmentService.removeDeptByName(id);
+        this.departmentService.removeDeptById(id);
         modelAndView.setViewName("redirect:/admin/department");
         return modelAndView;
     }
